@@ -1,0 +1,167 @@
+// ==========================
+// LuminaBits SCSS Global Styles
+// ==========================
+
+// Use Variables and Reset
+@use "./variables" as *;
+@use "./reset" as *;
+
+// ==========================
+// Global Body and Root
+// ==========================
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-md;
+  color: $text-light;
+  background-color: $background-light;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// ==========================
+// Typography
+// ==========================
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 $spacing-md 0;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+  color: $text-light;
+}
+
+h1 {
+  font-size: $font-size-xxl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+h4 {
+  font-size: $font-size-md;
+}
+
+h5 {
+  font-size: $font-size-sm;
+}
+
+h6 {
+  font-size: $font-size-xs;
+}
+
+p {
+  margin: 0 0 $spacing-md 0;
+  line-height: $line-height-md;
+  color: $text-light;
+}
+
+a {
+  color: $primary-light;
+  transition: color $transition-fast;
+  
+  &:hover,
+  &:focus {
+    color: $accent-light;
+  }
+}
+
+// ==========================
+// Buttons
+// ==========================
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary-light;
+  color: $background-light;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $accent-light;
+  }
+}
+
+// ==========================
+// Links
+// ==========================
+
+a {
+  text-decoration: none;
+  transition: color $transition-fast;
+}
+
+// ==========================
+// Images
+// ==========================
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $border-radius-sm;
+}
+
+// ==========================
+// Forms
+// ==========================
+
+input, select, textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: $spacing-sm;
+  border: $border-width solid $neutral-300;
+  border-radius: $border-radius-sm;
+  transition: border-color $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-light;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 0;
+  padding: $spacing-sm;
+}

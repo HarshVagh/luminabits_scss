@@ -1,0 +1,124 @@
+// ==========================
+// LuminaBits SCSS Base Styles
+// ==========================
+
+// Use Variables and Reset
+@use "../core/variables" as *;
+@use "../core/reset" as *;
+
+// ==========================
+// Global Styles
+// ==========================
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; /* Set the base font size */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-md;
+  color: $text-light;
+  background-color: $background-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ==========================
+// Links
+// ==========================
+
+a {
+  color: $primary-light;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover,
+  &:focus {
+    color: $accent-light;
+    text-decoration: underline;
+  }
+}
+
+// ==========================
+// Images and Media
+// ==========================
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ==========================
+// Lists
+// ==========================
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// ==========================
+// Forms
+// ==========================
+
+input, button, select, textarea {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border: $border-width solid $primary-light;
+  box-shadow: 0 0 0 3px rgba(0, 86, 240, 0.2);
+}
+
+// ==========================
+// Tables
+// ==========================
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  text-align: left;
+  padding: $spacing-sm;
+  border-bottom: $border-width solid $neutral-300;
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}

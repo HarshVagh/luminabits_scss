@@ -1,0 +1,187 @@
+// ==========================
+// LuminaBits SCSS Responsive Styles
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Breakpoint Utilities
+// ==========================
+
+/* Extra Small Devices (Portrait Phones, <480px) */
+@media (max-width: $breakpoint-xs) {
+  .hide-xs {
+    display: none !important;
+  }
+
+  .show-xs {
+    display: block !important;
+  }
+}
+
+/* Small Devices (Tablets, <768px) */
+@media (max-width: $breakpoint-sm) {
+  .hide-sm {
+    display: none !important;
+  }
+
+  .show-sm {
+    display: block !important;
+  }
+
+  .text-sm-center {
+    text-align: center !important;
+  }
+
+  .text-sm-left {
+    text-align: left !important;
+  }
+
+  .text-sm-right {
+    text-align: right !important;
+  }
+}
+
+/* Medium Devices (Desktops, <1024px) */
+@media (max-width: $breakpoint-md) {
+  .hide-md {
+    display: none !important;
+  }
+
+  .show-md {
+    display: block !important;
+  }
+
+  .text-md-center {
+    text-align: center !important;
+  }
+
+  .text-md-left {
+    text-align: left !important;
+  }
+
+  .text-md-right {
+    text-align: right !important;
+  }
+}
+
+/* Large Devices (Desktops, <1200px) */
+@media (max-width: $breakpoint-lg) {
+  .hide-lg {
+    display: none !important;
+  }
+
+  .show-lg {
+    display: block !important;
+  }
+
+  .text-lg-center {
+    text-align: center !important;
+  }
+
+  .text-lg-left {
+    text-align: left !important;
+  }
+
+  .text-lg-right {
+    text-align: right !important;
+  }
+}
+
+/* Extra Large Devices (Widescreens, <1440px) */
+@media (max-width: $breakpoint-xl) {
+  .hide-xl {
+    display: none !important;
+  }
+
+  .show-xl {
+    display: block !important;
+  }
+
+  .text-xl-center {
+    text-align: center !important;
+  }
+
+  .text-xl-left {
+    text-align: left !important;
+  }
+
+  .text-xl-right {
+    text-align: right !important;
+  }
+}
+
+// ==========================
+// Responsive Layout Utilities
+// ==========================
+
+/* Full Width */
+.full-width-xs {
+  @media (max-width: $breakpoint-xs) {
+    width: 100% !important;
+  }
+}
+
+.full-width-sm {
+  @media (max-width: $breakpoint-sm) {
+    width: 100% !important;
+  }
+}
+
+.full-width-md {
+  @media (max-width: $breakpoint-md) {
+    width: 100% !important;
+  }
+}
+
+.full-width-lg {
+  @media (max-width: $breakpoint-lg) {
+    width: 100% !important;
+  }
+}
+
+.full-width-xl {
+  @media (max-width: $breakpoint-xl) {
+    width: 100% !important;
+  }
+}
+
+/* Responsive Margins */
+.margin-sm-none {
+  @media (max-width: $breakpoint-sm) {
+    margin: 0 !important;
+  }
+}
+
+.margin-md-auto {
+  @media (max-width: $breakpoint-md) {
+    margin: auto !important;
+  }
+}
+
+/* Responsive Padding */
+.padding-sm-none {
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 !important;
+  }
+}
+
+.padding-md-large {
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg !important;
+  }
+}
+
+/* Responsive Grid Alignment */
+.flex-column-sm {
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column !important;
+  }
+}
+
+.flex-column-md {
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column !important;
+  }
+}

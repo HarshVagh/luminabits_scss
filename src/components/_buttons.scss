@@ -1,0 +1,164 @@
+// ==========================
+// LuminaBits SCSS Button Styles
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// Fallback Colors for Sass Manipulation
+$primary-light-fallback: #0056f0;
+$secondary-light-fallback: #d4e5f9;
+$accent-light-fallback: #9b51e0;
+
+// ==========================
+// Base Button Styles
+// ==========================
+
+.button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-md;
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius-md;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color $transition-fast, color $transition-fast, box-shadow $transition-fast;
+}
+
+// ==========================
+// Button Variants
+// ==========================
+
+/* Primary Button */
+.button-primary {
+  background-color: $primary-light;
+  color: $background-light;
+  &:hover {
+    background-color: color.adjust($primary-light-fallback, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.adjust($primary-light-fallback, $lightness: -15%);
+  }
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+/* Secondary Button */
+.button-secondary {
+  background-color: $secondary-light;
+  color: $text-light;
+  &:hover {
+    background-color: color.adjust($secondary-light-fallback, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.adjust($secondary-light-fallback, $lightness: -15%);
+  }
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+/* Accent Button */
+.button-accent {
+  background-color: $accent-light;
+  color: $background-light;
+  &:hover {
+    background-color: color.adjust($accent-light-fallback, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.adjust($accent-light-fallback, $lightness: -15%);
+  }
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+/* Outline Button */
+.button-outline {
+  background-color: transparent;
+  color: $primary-light;
+  border: 2px solid $primary-light;
+  &:hover {
+    background-color: $primary-light;
+    color: $background-light;
+  }
+  &:active {
+    background-color: color.adjust($primary-light-fallback, $lightness: -10%);
+  }
+  &:disabled {
+    border-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+// ==========================
+// Button Sizes
+// ==========================
+
+.button-sm {
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+}
+
+.button-md {
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-md;
+}
+
+.button-lg {
+  padding: $spacing-md $spacing-lg;
+  font-size: $font-size-lg;
+}
+
+// ==========================
+// Icon Buttons
+// ==========================
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xs;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $primary-light;
+  color: $background-light;
+  &:hover {
+    background-color: color.adjust($primary-light-fallback, $lightness: -10%);
+  }
+  &:active {
+    background-color: color.adjust($primary-light-fallback, $lightness: -15%);
+  }
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.button-full {
+  width: 100%;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

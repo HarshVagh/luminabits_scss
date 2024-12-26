@@ -1,0 +1,199 @@
+// ==========================
+// LuminaBits SCSS Header Styles
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// ==========================
+// Base Header Styles
+// ==========================
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-light;
+  color: $text-light;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
+  border-bottom: $border-width solid $neutral-300;
+  z-index: $z-index-high;
+}
+
+// ==========================
+// Header Branding
+// ==========================
+
+.header-brand {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $primary-light;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-light;
+  }
+}
+
+// ==========================
+// Header Navigation
+// ==========================
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+
+  .header-nav-item {
+    font-size: $font-size-md;
+    font-weight: $font-weight-regular;
+    text-decoration: none;
+    color: $text-light;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    transition: background-color $transition-fast, color $transition-fast;
+
+    &:hover,
+    &:focus {
+      background-color: $neutral-200;
+      color: $primary-light;
+    }
+
+    &.is-active {
+      background-color: $primary-light;
+      color: $background-light;
+    }
+  }
+}
+
+// ==========================
+// Header Actions
+// ==========================
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+
+  .action-button {
+    font-size: $font-size-md;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    background-color: $primary-light;
+    color: $background-light;
+    border: none;
+    cursor: pointer;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: color.adjust($primary-light, $lightness: -10%);
+    }
+
+    &:disabled {
+      background-color: $neutral-300;
+      color: $neutral-500;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// ==========================
+// Header Utility Classes
+// ==========================
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: $z-index-high;
+}
+
+.header-centered {
+  justify-content: center;
+}
+
+// ==========================
+// Mobile Header
+// ==========================
+
+.header-mobile {
+  display: none;
+
+  .mobile-menu-toggle {
+    font-size: $font-size-lg;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $text-light;
+    padding: $spacing-sm;
+
+    &:hover {
+      color: $primary-light;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-light;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    border-top: $border-width solid $neutral-300;
+    box-shadow: $shadow-lg;
+
+    .header-nav-item {
+      padding: $spacing-md;
+      border-bottom: $border-width solid $neutral-200;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// ==========================
+// Example Usage
+// ==========================
+
+.header-example {
+  background-color: $background-dark;
+  color: $text-dark;
+
+  .header-brand {
+    color: $primary-dark;
+
+    &:hover {
+      color: $accent-dark;
+    }
+  }
+
+  .header-nav-item {
+    color: $text-dark;
+
+    &:hover,
+    &:focus {
+      background-color: $neutral-400;
+      color: $accent-dark;
+    }
+
+    &.is-active {
+      background-color: $accent-dark;
+      color: $background-dark;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+// ==========================
+// LuminaBits SCSS Alert Styles
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// ==========================
+// Base Alert Styles
+// ==========================
+
+.alert {
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  box-shadow: $shadow-sm;
+  border: $border-width solid transparent;
+  transition: all $transition-fast;
+}
+
+// ==========================
+// Alert Variants
+// ==========================
+
+/* Success Alert */
+.alert-success {
+  background-color: color.adjust($secondary-light, $lightness: 40%);
+  border-color: $secondary-light;
+  color: color.adjust($secondary-light, $lightness: -20%);
+
+  .alert-icon {
+    color: $secondary-light;
+  }
+}
+
+/* Error Alert */
+.alert-error {
+  background-color: color.adjust($accent-light, $lightness: 40%);
+  border-color: $accent-light;
+  color: color.adjust($accent-light, $lightness: -20%);
+
+  .alert-icon {
+    color: $accent-light;
+  }
+}
+
+/* Warning Alert */
+.alert-warning {
+  background-color: #fff9c4;
+  border-color: #ffeb3b;
+  color: #f57f17;
+
+  .alert-icon {
+    color: #ffeb3b;
+  }
+}
+
+/* Info Alert */
+.alert-info {
+  background-color: color.adjust($primary-light, $lightness: 40%);
+  border-color: $primary-light;
+  color: color.adjust($primary-light, $lightness: -20%);
+
+  .alert-icon {
+    color: $primary-light;
+  }
+}
+
+/* Neutral Alert */
+.alert-neutral {
+  background-color: $neutral-200;
+  border-color: $neutral-300;
+  color: $neutral-600;
+
+  .alert-icon {
+    color: $neutral-400;
+  }
+}
+
+// ==========================
+// Alert Icon
+// ==========================
+
+.alert-icon {
+  font-size: $font-size-lg;
+  flex-shrink: 0;
+}
+
+// ==========================
+// Dismissible Alerts
+// ==========================
+
+.alert-dismissible {
+  position: relative;
+
+  .dismiss-button {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    background: none;
+    border: none;
+    font-size: $font-size-md;
+    cursor: pointer;
+    color: inherit;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: color.adjust($neutral-600, $lightness: -10%);
+    }
+  }
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.alert-full {
+  width: 100%;
+}
+
+.alert-centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+// ==========================
+// Example Usage
+// ==========================
+
+.alert-example {
+  .alert-success {
+    background-color: $secondary-dark;
+    color: $text-dark;
+  }
+
+  .alert-error {
+    background-color: $accent-dark;
+    color: $text-dark;
+  }
+
+  .alert-info {
+    background-color: $primary-dark;
+    color: $text-dark;
+  }
+}

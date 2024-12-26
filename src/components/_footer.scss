@@ -1,0 +1,179 @@
+// ==========================
+// LuminaBits SCSS Footer Styles
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Base Footer Styles
+// ==========================
+
+.footer {
+  background-color: $background-light;
+  color: $text-light;
+  padding: $spacing-lg $spacing-md;
+  text-align: center;
+  border-top: $border-width solid $neutral-300;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// ==========================
+// Footer Variants
+// ==========================
+
+/* Dark Footer */
+.footer-dark {
+  background-color: $background-dark;
+  color: $text-dark;
+  border-top: $border-width solid $neutral-600;
+
+  a {
+    color: $primary-dark;
+
+    &:hover {
+      color: $accent-dark;
+    }
+  }
+}
+
+/* Simple Footer */
+.footer-simple {
+  padding: $spacing-md;
+  text-align: left;
+  border: none;
+  box-shadow: none;
+}
+
+// ==========================
+// Footer Sections
+// ==========================
+
+.footer-logo {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $primary-light;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-light;
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+
+  a {
+    font-size: $font-size-md;
+    font-weight: $font-weight-regular;
+    text-decoration: none;
+    color: $text-light;
+    transition: color $transition-fast;
+
+    &:hover,
+    &:focus {
+      color: $primary-light;
+    }
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+
+  .social-icon {
+    font-size: $font-size-lg;
+    color: $text-light;
+    transition: color $transition-fast;
+
+    &:hover,
+    &:focus {
+      color: $primary-light;
+    }
+  }
+}
+
+.footer-credits {
+  margin-top: $spacing-lg;
+  font-size: $font-size-sm;
+  color: $neutral-500;
+
+  a {
+    color: $primary-light;
+
+    &:hover {
+      color: $accent-light;
+    }
+  }
+}
+
+// ==========================
+// Footer Utility Classes
+// ==========================
+
+.footer-centered {
+  text-align: center;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+// ==========================
+// Responsive Footer
+// ==========================
+
+@media (max-width: $breakpoint-md) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social {
+    flex-direction: column;
+  }
+}
+
+// ==========================
+// Example Usage
+// ==========================
+
+.footer-example {
+  background-color: $background-dark;
+  color: $text-dark;
+
+  .footer-logo {
+    color: $primary-dark;
+
+    &:hover {
+      color: $accent-dark;
+    }
+  }
+
+  .footer-links a {
+    color: $text-dark;
+
+    &:hover,
+    &:focus {
+      color: $accent-dark;
+    }
+  }
+
+  .footer-social .social-icon {
+    color: $text-dark;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}

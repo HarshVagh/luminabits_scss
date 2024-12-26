@@ -1,0 +1,112 @@
+// ==========================
+// LuminaBits SCSS Grid System
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Grid Container
+// ==========================
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 $spacing-md;
+}
+
+// ==========================
+// Grid Utilities
+// ==========================
+
+// Basic Grid with Configurable Columns and Gap
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-md;
+}
+
+// Grid with Custom Column Count
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+// ==========================
+// Grid Alignment
+// ==========================
+
+// Horizontal Alignment
+.justify-start { justify-content: start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+// Vertical Alignment
+.items-start { align-items: start; }
+.items-center { align-items: center; }
+.items-end { align-items: end; }
+.items-stretch { align-items: stretch; }
+
+// Grid Alignment Shorthand
+.place-center {
+  justify-content: center;
+  align-items: center;
+}
+
+// ==========================
+// Grid Gaps
+// ==========================
+
+.gap-xs { gap: $spacing-xs; }
+.gap-sm { gap: $spacing-sm; }
+.gap-md { gap: $spacing-md; }
+.gap-lg { gap: $spacing-lg; }
+.gap-xl { gap: $spacing-xl; }
+.gap-xxl { gap: $spacing-xxl; }
+
+// ==========================
+// Responsive Grids
+// ==========================
+
+@media (min-width: $breakpoint-sm) {
+  .grid-sm-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-sm-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-sm-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: $breakpoint-md) {
+  .grid-md-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-md-6 { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .grid-lg-8 { grid-template-columns: repeat(8, 1fr); }
+  .grid-lg-12 { grid-template-columns: repeat(12, 1fr); }
+}
+
+// ==========================
+// Grid Example Class
+// ==========================
+
+.grid-example {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+  background-color: $secondary-light;
+
+  > div {
+    background-color: $primary-light;
+    color: $background-light;
+    padding: $spacing-md;
+    text-align: center;
+    border-radius: $border-radius-sm;
+  }
+}

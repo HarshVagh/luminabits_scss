@@ -1,0 +1,102 @@
+// ==========================
+// LuminaBits SCSS Visibility Utilities
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// ==========================
+// Visibility Utilities
+// ==========================
+
+/* Display Utilities */
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+/* Visibility Utilities */
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Opacity Utilities */
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+/* Responsive Visibility */
+@media (max-width: $breakpoint-sm) {
+  .d-none-sm {
+    display: none !important;
+  }
+  .d-block-sm {
+    display: block !important;
+  }
+  .d-flex-sm {
+    display: flex !important;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .d-none-md {
+    display: none !important;
+  }
+  .d-block-md {
+    display: block !important;
+  }
+  .d-flex-md {
+    display: flex !important;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .d-none-lg {
+    display: none !important;
+  }
+  .d-block-lg {
+    display: block !important;
+  }
+  .d-flex-lg {
+    display: flex !important;
+  }
+}

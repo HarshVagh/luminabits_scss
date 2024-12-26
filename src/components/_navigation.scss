@@ -1,0 +1,168 @@
+// ==========================
+// LuminaBits SCSS Navigation Styles
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Base Navigation
+// ==========================
+
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: $background-light;
+  color: $text-light;
+  padding: $spacing-sm $spacing-md;
+  box-shadow: $shadow-sm;
+  border-bottom: $border-width solid $neutral-300;
+}
+
+// ==========================
+// Navigation Variants
+// ==========================
+
+/* Horizontal Navigation */
+.nav-horizontal {
+  justify-content: space-between;
+}
+
+/* Vertical Navigation */
+.nav-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: $spacing-md;
+  width: 100%;
+  border-right: $border-width solid $neutral-300;
+}
+
+// ==========================
+// Navigation Items
+// ==========================
+
+.nav-item {
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  margin: 0 $spacing-sm;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  color: $text-light;
+  text-decoration: none;
+  transition: background-color $transition-fast, color $transition-fast;
+
+  &:hover,
+  &:focus {
+    background-color: $neutral-200;
+    color: $primary-light;
+  }
+
+  &.is-active {
+    background-color: $primary-light;
+    color: $background-light;
+  }
+}
+
+// ==========================
+// Dropdown Menu
+// ==========================
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $background-light;
+    box-shadow: $shadow-md;
+    border-radius: $border-radius-sm;
+    padding: $spacing-sm 0;
+    z-index: $z-index-medium;
+
+    .dropdown-item {
+      font-size: $font-size-md;
+      padding: $spacing-sm $spacing-md;
+      color: $text-light;
+      text-decoration: none;
+      transition: background-color $transition-fast;
+
+      &:hover {
+        background-color: $neutral-200;
+        color: $primary-light;
+      }
+    }
+  }
+
+  &:hover .dropdown-menu,
+  &:focus-within .dropdown-menu {
+    display: block;
+  }
+}
+
+// ==========================
+// Navigation Branding
+// ==========================
+
+.nav-brand {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $primary-light;
+  text-decoration: none;
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+    color: $accent-light;
+  }
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.nav-center {
+  justify-content: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-sticky {
+  position: sticky;
+  top: 0;
+  z-index: $z-index-high;
+}
+
+// ==========================
+// Example Usage
+// ==========================
+
+.nav-example {
+  background-color: $background-dark;
+  color: $text-dark;
+
+  .nav-item {
+    color: $text-dark;
+
+    &:hover,
+    &:focus {
+      color: $accent-dark;
+    }
+
+    &.is-active {
+      background-color: $accent-dark;
+      color: $background-dark;
+    }
+  }
+}

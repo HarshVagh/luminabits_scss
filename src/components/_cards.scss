@@ -1,0 +1,166 @@
+// ==========================
+// LuminaBits SCSS Card Styles
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// ==========================
+// Base Card Styles
+// ==========================
+
+.card {
+  background-color: $background-light;
+  color: $text-light;
+  border: $border-width solid $neutral-300;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  padding: $spacing-md;
+  transition: box-shadow $transition-fast, transform $transition-fast;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+  }
+}
+
+// ==========================
+// Card Variants
+// ==========================
+
+/* Outlined Card */
+.card-outlined {
+  background-color: transparent;
+  border: $border-width solid $neutral-300;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $primary-light;
+  }
+}
+
+/* Elevated Card */
+.card-elevated {
+  box-shadow: $shadow-md;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+  }
+}
+
+/* Accent Card */
+.card-accent {
+  border: $border-width solid $accent-light;
+  background-color: color.adjust($accent-light, $lightness: 40%);
+  color: $background-light;
+
+  &:hover {
+    background-color: color.adjust($accent-light, $lightness: 30%);
+  }
+}
+
+// ==========================
+// Card Header
+// ==========================
+
+.card-header {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-sm;
+  color: $text-light;
+  border-bottom: $border-width solid $neutral-300;
+  padding-bottom: $spacing-xs;
+}
+
+// ==========================
+// Card Body
+// ==========================
+
+.card-body {
+  font-size: $font-size-md;
+  color: $text-light;
+  line-height: $line-height-md;
+}
+
+// ==========================
+// Card Footer
+// ==========================
+
+.card-footer {
+  margin-top: $spacing-md;
+  padding-top: $spacing-xs;
+  border-top: $border-width solid $neutral-300;
+  text-align: right;
+
+  .card-footer-action {
+    margin-left: $spacing-sm;
+
+    button {
+      font-size: $font-size-sm;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $border-radius-sm;
+    }
+  }
+}
+
+// ==========================
+// Card Media
+// ==========================
+
+.card-media {
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-sm;
+  object-fit: cover;
+}
+
+// ==========================
+// Card Sizes
+// ==========================
+
+.card-sm {
+  padding: $spacing-sm;
+}
+
+.card-lg {
+  padding: $spacing-lg;
+}
+
+// ==========================
+// Card Utility Classes
+// ==========================
+
+.card-full {
+  width: 100%;
+}
+
+.card-centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+// ==========================
+// Example Card
+// ==========================
+
+.card-example {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  .card-header {
+    background-color: $primary-light;
+    color: $background-light;
+    padding: $spacing-sm;
+  }
+
+  .card-body {
+    padding: $spacing-sm;
+  }
+
+  .card-footer {
+    background-color: $secondary-light;
+    padding: $spacing-sm;
+  }
+}

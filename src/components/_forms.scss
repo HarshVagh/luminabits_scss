@@ -1,0 +1,209 @@
+// ==========================
+// LuminaBits SCSS Form Styles
+// ==========================
+
+@use "sass:color";
+@use "../core/variables" as *;
+
+// ==========================
+// Base Form Styles
+// ==========================
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: $spacing-sm;
+  font-family: inherit;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: $text-light;
+  background-color: $background-light;
+  border: $border-width solid $neutral-300;
+  border-radius: $border-radius-sm;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-light;
+    box-shadow: 0 0 0 3px rgba(0, 86, 240, 0.2);
+  }
+
+  &:disabled {
+    background-color: $neutral-200;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $neutral-400;
+  }
+}
+
+// ==========================
+// Input Types
+// ==========================
+
+/* Text Input */
+.input-text {
+  border: $border-width solid $neutral-300;
+}
+
+/* Password Input */
+.input-password {
+  border: $border-width solid $neutral-300;
+}
+
+/* Search Input */
+.input-search {
+  border: $border-width solid $neutral-300;
+  padding-right: $spacing-lg;
+  background-image: url('path-to-search-icon.svg'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-position: right $spacing-sm center;
+  background-size: 16px;
+}
+
+// ==========================
+// Textarea
+// ==========================
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+// ==========================
+// Select Dropdown
+// ==========================
+
+select {
+  appearance: none;
+  background-image: url('path-to-dropdown-icon.svg'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-position: right $spacing-sm center;
+  background-size: 12px;
+
+  &:focus {
+    border-color: $primary-light;
+    box-shadow: 0 0 0 3px rgba(0, 86, 240, 0.2);
+  }
+}
+
+// ==========================
+// Checkbox and Radio Buttons
+// ==========================
+
+/* Checkbox */
+.input-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: $border-width solid $neutral-300;
+  border-radius: $border-radius-sm;
+  background-color: $background-light;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:checked {
+    background-color: $primary-light;
+    border-color: $primary-light;
+    background-image: url('path-to-checkmark-icon.svg'); /* Replace with actual path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+  }
+}
+
+/* Radio */
+.input-radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: $border-width solid $neutral-300;
+  border-radius: 50%;
+  background-color: $background-light;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:checked {
+    background-color: $primary-light;
+    border-color: $primary-light;
+  }
+}
+
+// ==========================
+// Labels
+// ==========================
+
+label {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-xs;
+  display: block;
+  color: $text-light;
+}
+
+// ==========================
+// Buttons Inside Forms
+// ==========================
+
+button[type="submit"],
+button[type="reset"] {
+  font-family: inherit;
+  font-size: $font-size-md;
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius-sm;
+  background-color: $primary-light;
+  color: $background-light;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: color.adjust($primary-light, $lightness: -10%)
+  }
+
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    cursor: not-allowed;
+  }
+}
+
+// ==========================
+// Form Groups
+// ==========================
+
+.form-group {
+  margin-bottom: $spacing-md;
+
+  .form-group-inline {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+  }
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.input-full {
+  width: 100%;
+}
+
+.input-rounded {
+  border-radius: $border-radius-lg;
+}
+
+.input-error {
+  border-color: $accent-light;
+  color: $accent-light;
+
+  &::placeholder {
+    color: $accent-light;
+  }
+}

@@ -1,0 +1,237 @@
+// ==========================
+// LuminaBits SCSS Typography Styles
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Base Typography
+// ==========================
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-md;
+  color: $text-light;
+  text-rendering: optimizeLegibility;
+}
+
+// ==========================
+// Headings
+// ==========================
+
+h1, .h1 {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+  color: $text-light;
+  margin-bottom: $spacing-sm;
+}
+
+h2, .h2 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+  color: $text-light;
+  margin-bottom: $spacing-sm;
+}
+
+h3, .h3 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-md;
+  color: $text-light;
+  margin-bottom: $spacing-xs;
+}
+
+h4, .h4 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-md;
+  color: $text-light;
+  margin-bottom: $spacing-xs;
+}
+
+h5, .h5 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-md;
+  color: $text-light;
+  margin-bottom: $spacing-xs;
+}
+
+h6, .h6 {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sm;
+  color: $text-light;
+  margin-bottom: $spacing-xs;
+}
+
+// ==========================
+// Paragraphs
+// ==========================
+
+p {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: $text-light;
+  margin-bottom: $spacing-md;
+}
+
+.lead {
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  font-weight: $font-weight-medium;
+  color: $text-light;
+}
+
+// ==========================
+// Links
+// ==========================
+
+a {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $primary-light;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover,
+  &:focus {
+    color: $accent-light;
+    text-decoration: underline;
+  }
+}
+
+// ==========================
+// Text Utilities
+// ==========================
+
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-medium {
+  font-weight: $font-weight-medium;
+}
+
+.text-regular {
+  font-weight: $font-weight-regular;
+}
+
+.text-light {
+  color: $text-light;
+}
+
+.text-dark {
+  color: $text-dark;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-muted {
+  color: $neutral-400;
+}
+
+.text-highlight {
+  background-color: $accent-light;
+  color: $background-light;
+}
+
+// ==========================
+// Lists
+// ==========================
+
+ul, ol {
+  margin: 0 0 $spacing-md $spacing-md;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  margin-bottom: $spacing-xs;
+}
+
+// ==========================
+// Blockquote
+// ==========================
+
+blockquote {
+  font-size: $font-size-lg;
+  font-style: italic;
+  color: $neutral-500;
+  border-left: $border-width solid $neutral-300;
+  padding-left: $spacing-md;
+  margin: $spacing-md 0;
+}
+
+// ==========================
+// Code and Preformatted Text
+// ==========================
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: $font-size-sm;
+  background-color: $neutral-200;
+  color: $text-light;
+  padding: $spacing-xs;
+  border-radius: $border-radius-sm;
+}
+
+pre {
+  font-family: 'Source Code Pro', monospace;
+  font-size: $font-size-sm;
+  background-color: $neutral-200;
+  color: $text-light;
+  padding: $spacing-md;
+  border-radius: $border-radius-sm;
+  overflow-x: auto;
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.line-height-sm {
+  line-height: $line-height-sm;
+}
+
+.line-height-md {
+  line-height: $line-height-md;
+}
+
+.line-height-lg {
+  line-height: $line-height-lg;
+}

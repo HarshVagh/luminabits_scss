@@ -1,0 +1,17 @@
+{
+  "name": "luminabits-scss",
+  "version": "1.0.0",
+  "description": "A lightweight SCSS library for consistent UI/UX design.",
+  "main": "dist/luminaBits.css",
+  "style": "dist/luminaBits.css",
+  "keywords": ["scss", "css", "library", "design-system", "luminaBits"],
+  "author": "Harsh Vaghasiya",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass src/main.scss dist/luminaBits.css && sass src/main.scss dist/luminaBits.min.css --style=compressed",
+    "watch": "sass --watch src/main.scss:dist/luminaBits.css"
+  },
+  "devDependencies": {
+    "sass": "^1.62.0"
+  }
+}

@@ -1,0 +1,144 @@
+// ==========================
+// LuminaBits SCSS Animation Utilities
+// ==========================
+
+// Use Variables
+@use "../core/variables" as *;
+
+// ==========================
+// Keyframes
+// ==========================
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade Out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide In */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out */
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Spin */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ==========================
+// Animation Utilities
+// ==========================
+
+/* Duration */
+.animation-fast {
+  animation-duration: 0.5s !important;
+}
+
+.animation-medium {
+  animation-duration: 1s !important;
+}
+
+.animation-slow {
+  animation-duration: 2s !important;
+}
+
+/* Easing */
+.animation-ease {
+  animation-timing-function: ease !important;
+}
+
+.animation-ease-in {
+  animation-timing-function: ease-in !important;
+}
+
+.animation-ease-out {
+  animation-timing-function: ease-out !important;
+}
+
+.animation-linear {
+  animation-timing-function: linear !important;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn $transition-fast forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut $transition-fast forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn $transition-medium forwards;
+}
+
+.animate-slide-out {
+  animation: slideOut $transition-medium forwards;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+// ==========================
+// Utility Classes
+// ==========================
+
+.animation-none {
+  animation: none !important;
+}

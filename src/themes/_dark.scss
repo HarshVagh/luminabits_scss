@@ -1,0 +1,52 @@
+// ==========================
+// LuminaBits Dark Theme
+// ==========================
+
+// Use Variables
+@use "../core/variables";
+
+// ==========================
+// Dark Theme Colors
+// ==========================
+
+:root {
+  /* Background and Surface Colors */
+  --background-dark: #202020;
+  --surface-dark: $neutral-600;
+
+  /* Text Colors */
+  --text-dark: #F1F1F1;
+  --text-secondary-dark: $neutral-300;
+  --text-muted-dark: $neutral-400;
+
+  /* Primary Colors */
+  --primary-dark: #287bff;
+  --primary-dark-hover: color.adjust($primary-dark, $lightness: 10%);
+  --primary-dark-active: color.adjust($primary-dark, $lightness: -10%);
+
+  /* Secondary Colors */
+  --secondary-dark: #3A3A3A;
+  --secondary-dark-hover: color.adjust($secondary-dark, $lightness: 5%);
+  --secondary-dark-active: color.adjust($secondary-dark, $lightness: -5%);
+
+  /* Accent Colors */
+  --accent-dark: #bb86fc;
+  --accent-dark-hover: color.adjust($accent-dark, $lightness: 10%);
+  --accent-dark-active: color.adjust($accent-dark, $lightness: -10%);
+
+  /* Neutral Colors */
+  --neutral-dark: $neutral-500;
+  --neutral-dark-hover: color.adjust($neutral-dark, $lightness: 5%);
+  --neutral-dark-active: color.adjust($neutral-dark, $lightness: -5%);
+
+  /* Borders and Shadows */
+  --border-dark: $neutral-600;
+  --shadow-dark: $shadow-md;
+  --shadow-dark-hover: $shadow-lg;
+
+  /* Highlights and Feedback */
+  --success-dark: #27ae60;
+  --error-dark: #e74c3c;
+  --warning-dark: #f1c40f;
+  --info-dark: $primary-dark;
+}

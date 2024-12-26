@@ -1,0 +1,52 @@
+// ==========================
+// LuminaBits Light Theme
+// ==========================
+
+// Use Variables
+@use "../core/variables";
+
+// ==========================
+// Light Theme Colors
+// ==========================
+
+:root {
+  /* Background and Surface Colors */
+  --background-light: #FFFFFF;
+  --surface-light: $neutral-100;
+
+  /* Text Colors */
+  --text-light: #212121;
+  --text-secondary-light: $neutral-500;
+  --text-muted-light: $neutral-400;
+
+  /* Primary Colors */
+  --primary-light: #0056f0;
+  --primary-light-hover: color.adjust($primary-light, $lightness: 10%);
+  --primary-light-active: color.adjust($primary-light, $lightness: -10%);
+
+  /* Secondary Colors */
+  --secondary-light: #D4E5F9;
+  --secondary-light-hover: color.adjust($secondary-light, $lightness: 5%);
+  --secondary-light-active: color.adjust($secondary-light, $lightness: -5%);
+
+  /* Accent Colors */
+  --accent-light: #9b51e0;
+  --accent-light-hover: color.adjust($accent-light, $lightness: 10%);
+  --accent-light-active: color.adjust($accent-light, $lightness: -10%);
+
+  /* Neutral Colors */
+  --neutral-light: $neutral-300;
+  --neutral-light-hover: color.adjust($neutral-light, $lightness: 5%);
+  --neutral-light-active: color.adjust($neutral-light, $lightness: -5%);
+
+  /* Borders and Shadows */
+  --border-light: $neutral-300;
+  --shadow-light: $shadow-sm;
+  --shadow-light-hover: $shadow-md;
+
+  /* Highlights and Feedback */
+  --success-light: #27ae60;
+  --error-light: #e74c3c;
+  --warning-light: #f1c40f;
+  --info-light: $primary-light;
+}

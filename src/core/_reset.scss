@@ -1,0 +1,108 @@
+// ==========================
+// LuminaBits SCSS Reset
+// ==========================
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove Default Margins */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+figure, dl, dd {
+  margin: 0;
+}
+
+/* Remove Default Padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Reset List Styles */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set Default Body Styles */
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif; /* Default Font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove Default Underline from Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset Images and Media */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset Table Styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+/* Reset Forms */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Accessibility */
+:focus {
+  outline: 2px dashed #0056f0; /* Use the primary color for focus */
+  outline-offset: 2px;
+}
+
+/* Remove Default Quotes on Blockquote */
+blockquote {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '';
+  content: none;
+}
+
+/* Remove Default Fieldset Border */
+fieldset {
+  border: none;
+}

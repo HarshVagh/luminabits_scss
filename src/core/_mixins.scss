@@ -1,0 +1,126 @@
+// ==========================
+// LuminaBits SCSS Mixins
+// ==========================
+
+// ==========================
+// Flexbox Utilities
+// ==========================
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// ==========================
+// Grid Utilities
+// ==========================
+
+@mixin grid($columns, $gap: $spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// ==========================
+// Responsive Breakpoints
+// ==========================
+
+@mixin respond-above($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Example Usage:
+// @include respond-above($breakpoint-md) { ... }
+// @include respond-below($breakpoint-sm) { ... }
+
+// ==========================
+// Typography Utilities
+// ==========================
+
+@mixin font($size, $weight: $font-weight-regular, $lineHeight: $line-height-md) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// ==========================
+// Shadows
+// ==========================
+
+@mixin box-shadow($shadow: $shadow-md) {
+  box-shadow: $shadow;
+}
+
+// ==========================
+// Transitions
+// ==========================
+
+@mixin transition($properties: all, $duration: $transition-fast) {
+  transition: $properties $duration;
+}
+
+// ==========================
+// Borders
+// ==========================
+
+@mixin border-radius($radius: $border-radius-md) {
+  border-radius: $radius;
+}
+
+@mixin border($width: $border-width, $style: solid, $color: $neutral-300) {
+  border: $width $style $color;
+}
+
+// ==========================
+// Utility Mixins
+// ==========================
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
